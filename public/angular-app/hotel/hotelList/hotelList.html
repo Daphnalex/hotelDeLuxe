@@ -1,0 +1,82 @@
+<div class="container">
+    <br>
+    <div id="myCarousel" class="row carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="" ng-repeat="hotel in hl.hotels" data-slide-to="$index" ng-class="{'active': $index == 0}"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div id={{$index}} class="carousel-inner" role="listbox">
+            <div ng-repeat="hotel in hl.hotels" class="item" ng-class="{'active': $index == 0}">
+                <div class="image" style="background-image:url({{hotel.photos[0]}})"><img src="{{hotel.photos[0]}}" alt="Photo du {{hotel.name}}" /></div>
+                <div class="carousel-caption">
+                    <h3>{{hotel.name}}</h3>
+                    <p>{{hotel.description}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 listHotel">
+        <div class="row">
+          <h2>Derniers hôtels</h2>
+        </div>
+        <div class="row">
+          <ol>
+            <li ng-repeat="hotel in hl.hotels">
+              <div class="jumbotron">
+                <h3>{{hotel.name}}</h3>
+                <p>{{hotel.description}}</p>
+                <div class="row">
+                  <p><a class="btn btn-primary btn-lg right" ng-click="hl.pageHotel(hotel)" role="button">Learn more</a></p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="col-xs-6 listHotel">
+        <div class="row">
+          <h2>Derniers commentaires</h2>
+        </div>
+        <div class="row">
+          <ol>
+            <li class="listComment" ng-repeat="hotel in hl.hotels">
+              <h3>{{hotel.name}}</h3>
+              <div class="jumbotron">
+                <ol>
+                  <li class="comment" ng-repeat="comment in hotel.reviews">
+                    <h4>{{comment.name}}</h4>
+                    <p class="review">{{comment.review}}<br/>
+                      <span ng-repeat="i in hl.tabRating(comment.rating)" class="right glyphicon glyphicon-star-empty"></span>
+                    </br>
+                    </p>
+                  </li>
+                </ol>
+              </div>
+              <div class="row">
+                <p><a class="btn btn-primary btn-lg right" ng-click="hl.pageHotel(hotel)" role="button">Learn more</a></p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#myCarousel').carousel()
+  });
+</script>

@@ -1,0 +1,199 @@
+body {
+  font-size : 1.5em;
+}
+p{
+  font-size : 1.5em;
+}
+nav.navbar.navbar-default{
+  background-color: #414141;
+  height: 80px;
+}
+.navbar-default .navbar-brand{
+  color: #ffc24a;
+  font-size: 2em;
+  padding-left: 50px;
+  padding-top: 17%;
+}
+button.btn{
+  margin-right: 20px;
+  margin-top: 5%;
+  font-size: 1.7em;
+  width: 200px;
+  background-color: #ffc24a;
+  border-radius: 0px;
+  border : 1px solid grey;
+}
+.navbar-default .navbar-nav>li>a {
+    background-color: #ffc24a;
+  margin-right: 20px;
+  margin-top: 5%;
+  font-size: 1.7em;
+  width: 200px;
+  background-color: #ffc24a;
+  border-radius: 0px;
+  border : 1px solid grey;
+}
+.navbar-default .navbar-nav>li>a:hover{
+  background-color: #FFB63D;
+}
+.btn-primary{
+  background-color: #ffc24a;
+  border : 0px;
+  font-size: 1.3em;
+}
+.btn-primary:hover{
+  background-color: #FFB63D;
+  border : 0px;
+}
+h3{
+  font-weight: bold;
+}
+ol{
+  padding-left: 0px;
+}
+li{
+  list-style: none;
+}
+form{
+  font-size: 1.3em;
+}
+.form-control{
+  font-size: 1.1em;
+}
+form button.btn{
+  font-size: 1.1em;
+}
+
+/* PAGE D'ENREGISTREMENT*/
+
+.panel-info>.panel-heading{
+  background-color: #414141;
+  border: 1px solid #414141;
+  text-align: center;
+}
+div.panel-body{
+  border : 1px solid #414141;
+}
+div.panel-title{
+  font-size: 1.5em;
+  color: white;
+}
+#signupform label{
+  text-align: left;
+}
+#signupform input.form-control{
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button#btn-signup{
+  background-color: #ffc24a;
+  border : 0px solid;
+}
+button#btn-signup:hover{
+  background-color: #FFB63D;
+  border : 0px solid;
+}
+
+/*   CAROUSEL CSS    */
+#myCarousel{
+  width: 100%;
+  height: 640px;
+}
+.image {
+background-size: cover;
+width: 100%;
+height: 640px;
+}
+
+.image img {
+display: none;
+}
+
+/*LISTE D'HOTELS*/
+.listHotel{
+  margin-top: 40px;
+  max-height: 300px;
+  overflow: auto;
+}
+.listHotel li{
+  list-style: none;
+}
+
+
+
+div.jumbotron{
+  padding: 20px;
+}
+
+
+.right{
+   float:right;
+}
+div.jumbotron{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 90%;
+}
+.jumbotron p{
+  font-size: 19px;
+}
+h2{
+  margin-left: 30px;
+  color: #ffc24a;
+}
+h4{
+  font-weight: bold;
+}
+.comment{
+  border-bottom: 1px dashed #CCCCCC;
+}
+p.review{
+  font-style: italic;
+}
+.listComment{
+  padding-left: 20px;
+}
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.glyphicon-star-empty:before{
+  color:  #ffc24a;
+}
+
+/*DETAILS HOTELS*/
+
+.intro img{
+  width: 100%;
+}
+
+.nbChambre{
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #f1f0f1;
+  height: 40px;
+  padding-top: 5px;
+}
+.caption p{
+  font-size: 1.3em;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+.partComment{
+  background-color: #f1f0f1;
+  padding: 25px;
+  height: 500px;
+}
+.listComment > div.jumbotron{
+  height: 415px;
+  overflow: auto;
+}
+
+
+/*FOOTER*/
+footer {
+  height: 50px;
+}

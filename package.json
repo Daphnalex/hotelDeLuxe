@@ -1,0 +1,30 @@
+{
+  "name": "hotel-luxe",
+  "version": "1.0.0",
+  "description": "examen final",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daphnalex/Exam3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daphnalex/Exam3/issues"
+  },
+  "homepage": "https://github.com/Daphnalex/Exam3#readme",
+  "dependencies": {
+    "angular-animate": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.7.7",
+    "path": "^0.12.7",
+    "ui-bootstrap": "^0.1.6"
+  }
+}

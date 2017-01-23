@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div class="intro col-xs-12">
+      <img src="{{hd.hotel.photos[0]}}" alt="Photo de l'hôtel"/>
+    </div>
+  </div>
+  <div class="row">
+    <h1>{{hd.hotel.name}}</h1>
+    <p>{{hd.hotel.description}}</p>
+  </div>
+  <div class="row">
+    <div class="col-xs-6" ng-repeat="room in hd.hotel.rooms">
+      <div class="thumbnail">
+        <img src="{{room.photos[0]}}" alt="">
+        <div class="row caption">
+          <h3>{{room.type}}</h3>
+          <hr>
+          <p>{{room.description}}</p>
+          <div class="row">
+            <div class="nbChambre col-xs-4">{{room.number}} chambres</div>
+            <div class="col-xs-8">
+              <a href="#" class="btn btn-primary btn-lg right" role="button">Réserver</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row partComment">
+    <div class="col-xs-6">
+      <form name="hd.hotelForm" ng-submit="hd.addReview()">
+        <h2>Ajouter un commentaire à l'hôtel</h2>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Nom</label>
+          <input  ng-model="hd.name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Entrez votre nom">
+        </div>
+        <div class="form-group">
+          <label for="exampleSelect1">Choisissez une note :</label>
+          <select class="form-control" id="exampleSelect1" ng-model="hd.rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleTextarea">Saisissez votre commentaire :</label>
+          <textarea ng-model="hd.review" class="form-control" id="exampleTextarea" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </form>
+    </div>
+    <div class="col-xs-6">
+      <ol>
+        <li class="listComment">
+          <h3>Avis client :</h3>
+          <div class="jumbotron">
+            <ol>
+              <li class="comment" ng-repeat="comment in hd.hotel.reviews">
+                <h4>{{comment.name}}</h4>
+                <p class="review">{{comment.review}}<br/>
+                  <span ng-repeat="i in hd.tabRating(comment.rating)" class="right glyphicon glyphicon-star-empty"></span>
+                </br>
+                </p>
+              </li>
+            </ol>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
