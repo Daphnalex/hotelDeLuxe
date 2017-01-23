@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Daphnalex/Exam3"
+    "url": "git+https://github.com/Daphnalex/hotelDeLuxe"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Daphnalex/Exam3/issues"
+    "url": "https://github.com/Daphnalex/hotelDeLuxe/issues"
   },
-  "homepage": "https://github.com/Daphnalex/Exam3#readme",
+  "homepage": "https://github.com/Daphnalex/hotelDeLuxe#readme",
   "dependencies": {
     "angular-animate": "^1.6.1",
     "angular-route": "^1.6.1",
